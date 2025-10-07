@@ -68,7 +68,6 @@
   border: 1px solid white;
 }
 .section1 > div {
-  grid-column: 6 / span 8;
   display: flex;
   flex-direction: column;
   font-size: 1.1rem;
@@ -277,11 +276,14 @@ footer img{
     display: none;
   }
   .section1 {
-    flex-direction: column;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2, 1fr);
     padding: 1rem;
     text-align: center;
   }
   .section1 img {
+    grid-row: 1 / span 1;
+    grid-column: 1;
     width: 70%;
     max-width: 300px;
     margin-bottom: 1.5rem;
@@ -289,6 +291,7 @@ footer img{
   .section1 > div {
     font-size: 1rem;
     max-width: 90%;
+    grid-row: 2 / span 1;
   }
   .section2 {
     width: 100%;
@@ -335,7 +338,8 @@ footer img{
     display: none;
   }
   .section1 {
-    flex-direction: column;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2, 1fr);
     padding: 1rem;
     text-align: center;
   }
